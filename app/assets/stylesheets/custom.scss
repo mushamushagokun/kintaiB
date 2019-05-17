@@ -143,3 +143,31 @@ input, textarea, select, .uneditable-input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+// ユーザー名検索フォーム
+
+#form1{
+  width: 300px;
+  margin-left: auto;
+}
+
+#sbox{
+  width: 230px;
+  border-radius:2px 0 0 2px;
+  background:#eee;
+}
+
+#sbtn{
+  width:70px;
+  float: right;
+  color:#fff;
+  font-weight:bold;
+  font-size:16px;
+  border-radius:0 2px 2px 0;
+  background:#7fbfff;
+  border:none;
+}
+
+#sbtn:hover{
+  color:#666;
+}

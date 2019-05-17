@@ -1,6 +1,15 @@
 <% provide(:title, '一覧') %>
 <h1>ユーザ一覧</h1>
 
+<!--  検索拡張機能  -->
+ <div id="form1">
+      <p>ユーザー名検索</p>
+      <%= form_tag(users_path, :method => 'get' ) do %>
+      <%= text_field_tag :search, value="", id: "sbox"%>
+      <%= submit_tag '検索', :name => nil, id: "sbtn" %>
+      <% end %>
+ </div>
+
 <%= will_paginate %>
 
 <ul class="users">
@@ -8,3 +17,5 @@
 </ul>
 
 <%= will_paginate %>
+
+
