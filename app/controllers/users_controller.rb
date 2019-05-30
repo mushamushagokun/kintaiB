@@ -103,6 +103,15 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+    
+    
+    
+    
+    require 'date'
+
+    def date_valid?(str)
+      !! Date.parse(str) rescue false
+    end
 
 
 end

@@ -1,5 +1,10 @@
 <% provide(:title, '一覧') %>
-<h1>ユーザ一覧</h1>
+
+<% if params[:search].blank? %>
+    <h1>全てのユーザー</h1>
+<%else%>
+    <h1>検索結果</h1>
+<%end%>
 
 <!--  検索拡張機能  -->
  <div id="form1">

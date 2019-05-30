@@ -5,4 +5,6 @@ module UsersHelper
       format("%.2f", ((datetime.hour * 60) + datetime.min)/60.0)
     end
     
+
+    
 end
