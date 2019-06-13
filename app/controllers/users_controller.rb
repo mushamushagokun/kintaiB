@@ -7,7 +7,7 @@ class UsersController < ApplicationController
    @users = User.paginate(page: params[:page]).search(params[:search])
   end
 
- def show
+   def show
     @user = User.find(params[:id])
     @first_day = first_day(params[:first_day])
     @last_day = @first_day.end_of_month
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     end
     @dates = user_attendances_month_date
     @worked_sum = @dates.where.not(started_at: nil).count
- end
+   end
   
 
   def new
@@ -102,15 +102,6 @@ class UsersController < ApplicationController
     # 管理者かどうか確認
     def admin_user
       redirect_to(root_url) unless current_user.admin?
-    end
-    
-    
-    
-    
-    require 'date'
-
-    def date_valid?(str)
-      !! Date.parse(str) rescue false
     end
 
 

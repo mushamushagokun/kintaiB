@@ -9,9 +9,9 @@ User.create!(name:  "管理者",
   email = "email#{n+1}@sample.com"
   password = "password"
   User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
+              email: email,
+              password:              password,
+              password_confirmation: password)
 end
 
 50.times do
