@@ -13,6 +13,8 @@ module AttendancesHelper
     format("%.2f", (((finished_at - started_at) / 60) / 60.0))
   end
   
+  # 勤怠B10　---
+  
   def working_times_indicate_15minutes(started_at, finished_at)
     started_at_hour = started_at.to_s(:hour)
     started_at_minute = started_at.to_s(:min)
@@ -26,6 +28,8 @@ module AttendancesHelper
     
     format("%.2f", (((finished_at_total - started_at_total) / 60) / 60.0))
   end
+  
+  # ----------------
   
   def working_times_sum(seconds)
     format("%.2f", seconds / 60 / 60.0)
