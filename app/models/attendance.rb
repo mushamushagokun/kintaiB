@@ -21,4 +21,4 @@ class Attendance < ApplicationRecord
         errors.add(:finished_at, "入力に誤りがあります")
       end
     end
-
+end
