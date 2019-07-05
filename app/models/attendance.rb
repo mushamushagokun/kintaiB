@@ -21,4 +21,13 @@ class Attendance < ApplicationRecord
         errors.add(:finished_at, "入力に誤りがあります")
       end
     end
+
+
+  validate :work_cannot_be_in_the_future
+    def work_cannot_be_in_the_future
+      if worked_on > Date.today
+        errors.add(:worked_on, "未来の編集はできません")
+      end
+    end
+    
 end
