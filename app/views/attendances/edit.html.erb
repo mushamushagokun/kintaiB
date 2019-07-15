@@ -23,7 +23,7 @@
                          elsif day.worked_on.wday==6
                           "saturday"
                          end%>"><%= %w{日 月 火 水 木 金 土}[day.worked_on.wday]%></td>
-          <% if day.worked_on <= Date.today  %>
+          <% if day.worked_on <= Date.today %>
               <td><%= af.time_field :started_at, class: "form-control"%></td>
               <td><%= af.time_field :finished_at, class: "form-control" %></td>
               <td>
