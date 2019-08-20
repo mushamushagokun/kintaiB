@@ -27,6 +27,6 @@ class SessionsController < ApplicationController
     def log_in(user)                                                              # login_inメソッドにuser(ログイン時にユーザーが送ったメールとパスと同一の、DBにいるユーザー)を引数として渡す
       session[:user_id] = user.id                                                 # ユーザーidをsessionのuser_idに代入（ログインidの保持）
     end
-  
+    
    end  
 end

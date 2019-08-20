@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: [:destroy, :edit_basic_info, :update_basic_info]
   before_action :ensure_correct_user,   only: [:edit, :update, :show]
-  
+
   def index
    @users = User.paginate(page: params[:page]).search(params[:search])
   end
