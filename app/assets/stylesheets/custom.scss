@@ -221,3 +221,13 @@ input, textarea, select, .uneditable-input {
 input:read-only {
   background-color: gray;
 }
+
+// -----残業申請modai----------
+
+.modal-footer, .modal-title{
+  text-align: center;
+}
+
+.modal-close{
+  text-align: right;
+}

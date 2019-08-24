@@ -58,7 +58,11 @@
     <tbody>
       <% @dates.each do |day| %>
         <tr>
-          <td><%= link_to "残業申請", "#", class: "btn btn-primary" %></td>
+          <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-whatever=<%= day.worked_on.to_s(:date) %>>
+               残業申請
+            </button>
+          </td>
           <td><%= day.worked_on.to_s(:date) %></td>
           <td class="<% if day.worked_on.wday==0 %>
                            sunday
@@ -118,3 +122,4 @@
   </table>
 </div>
 
+          <%= render 'overwork-modal' %>
