@@ -23,13 +23,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-              <td id="recipient-date" colspan="1"></td>
-              <td colspan="1"></td>
-              <td colspan="3"></td>
-              <td colspan="1"><%= check_box_tag :sample %></td>
-              <td colspan="3"></td>
-              <td colspan="3"></td>
+            <tr class="overwork-input">
+              <td id="recipient-date"></td>
+              <td id="recipient-youbi"></td>
+              <td colspan="3"><input type="time"></td>
+              <td ><label>
+                    <input type="checkbox" name="overwork-checkbox">
+                   </label>
+              </td>
+              <td colspan="3"><input type="text"></td>
+              <td colspan="3"><label>
+                                <select name="frequency_id">
+                                  <option value="1">上長１</option>
+                                  <option value="2">上長２</option>
+                                </select>
+                              </label>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -47,9 +56,11 @@
 
 <script>$('#Modal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) //モーダルを呼び出すときに使われたボタンを取得
-  var recipient = button.data('whatever') //data-whatever の値を取得
+  var date = button.data('date') //data- の値を取得
+  var youbi = button.data('youbi')
   var modal = $(this)  //モーダルを取得
-  modal.find('.modal-body td#recipient-date').text(recipient) 
+  modal.find('.modal-body td#recipient-date').text(date)
+  modal.find('.modal-body td#recipient-youbi').text(youbi)
 })</script>
 
 

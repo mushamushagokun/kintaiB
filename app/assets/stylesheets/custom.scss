@@ -228,6 +228,32 @@ input:read-only {
   text-align: center;
 }
 
-.modal-close{
+.overwork-input input{
+ margin: 0;
+}
+
+
+label{
+  display:block;
+  position:relative;
+}
+label input{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:20px;
+  margin:auto;
+}
+
+label select{
+  position:absolute;
+  top:7px;
+  bottom:0;
+  left:0;
+  margin:auto;
+  height: 25px;
+}
+
+.modal-times{
   text-align: right;
 }
